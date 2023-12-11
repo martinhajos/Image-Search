@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo"></p>
+    <button id="demobutton">name</button>
+
+    <script>
+      // Create an object:
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+        setFirstName: function (firstName) {
+          this.firstName = firstName;
+        },
+      };
+
+      document
+        .getElementById("demobutton")
+        .addEventListener("click", function () {
+          console.log("asd");
+          let myperson = document.getElementById("demo").person;
+          myperson.setFirstName("asd");
+          document.getElementById("demo").innerHTML = myperson.fullName();
+        });
+
+      // Display data from the object:
+      document.getElementById("demo").person = person;
+
+      // onclick
+    </script>
+  </body>
+</html>
